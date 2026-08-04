@@ -29,7 +29,7 @@ while True:
 ██║     ██║  ██║███████║███████║╚███╔███╔╝╚██████╔╝██║  ██║██████╔╝    ╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║   ██║   ╚██████╔╝██║  ██║
 ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═════╝      ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
                                                                                                                                                       
-#  Version        : 1.0
+#  Version        : 1.1
 #  Project-rep    : https://github.com/farefare-ya/PythonLab
 #  Author         : farefare-ya
     
@@ -44,14 +44,15 @@ ______________________________________________________________
 
     
 """)
-    answer = int(input("$input :"))
+    answer = int(input("$input : "))
     if answer == 1:
         print(passwordgen())
         print()
         input("press ENTER to continue...")
     elif answer == 2:
-        i=0
-        while i<5:
+        key = int(input("How much... : "))
+        i=1
+        while i<=key:
             print(i,passwordgen())
             i=i+1
         print()
