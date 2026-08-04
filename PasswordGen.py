@@ -15,9 +15,9 @@ def passwordgen():
     b = max(gen1,gen2)
     c = min(gen3,gen4)
     d = max(gen3,gen4)
-    result1 = str(letterX[a:b]+letterY[a:b]+generic[c:d])
-    result2 = str(letterX[a:b]+letterY[a:b]+generic[c:d])
-    return result1[7:]+result2[:7]
+    result1 = str(letterX[a:b:1]+letterY[a:b:2]+generic[c:d:3]+letterX[a:b]+letterY[a:b]+generic[c:d])
+    result2 = str(letterX[a:b:3]+letterY[a:b:1]+generic[c:d:2]+letterX[a:b:3]+letterY[a:b:2]+generic[c:d:1])
+    return result1[1:]+result2[:1]
 
 
 while True:
@@ -47,8 +47,15 @@ ______________________________________________________________
     answer = int(input("$input :"))
     if answer == 1:
         print(passwordgen())
+        print()
+        input("press ENTER to continue...")
     elif answer == 2:
-        print(passwordgen())
+        i=0
+        while i<5:
+            print(i,passwordgen())
+            i=i+1
+        print()
+        input("press ENTER to continue...")
     elif answer == 3:
         sys.exit()
     else:
