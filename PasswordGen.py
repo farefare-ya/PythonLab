@@ -29,7 +29,7 @@ while True:
 ██║     ██║  ██║███████║███████║╚███╔███╔╝╚██████╔╝██║  ██║██████╔╝    ╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║   ██║   ╚██████╔╝██║  ██║
 ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═════╝      ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
                                                                                                                                                       
-#  Version        : 1.1
+#  Version        : 1.1.2
 #  Project-rep    : https://github.com/farefare-ya/PythonLab
 #  Author         : farefare-ya
     
@@ -44,7 +44,9 @@ ______________________________________________________________
 
     
 """)
-    answer = int(input("$input : "))
+    answer = input("$input : ")
+    if not isinstance(answer,int):
+        print("The argument should be number between 1-3")
     if answer == 1:
         print(passwordgen())
         print()
